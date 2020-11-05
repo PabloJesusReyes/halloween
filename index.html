@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrorifica fiesta de Halloween</title>
+    <style>
+        @font-face {
+            font-family:halloween1 ;
+            src: url(tipografias/ShallowGraveBB.ttf);
+        }
+        body {background-color: black;}
+        #container {position:relative;
+        background-image: url('imagenes/wallpaper.png');
+        margin: auto;
+        width:1306px; /* NO ES RESPONSIVE, OJO*/
+        height: 638px; /* Solo es por diversión*/
+        
+        }
+        #titulo{position: absolute;
+                top:80px;
+                left:500px;
+                font-family: halloween1;
+                font-size: 3em;
+                color: orange;
+                text-shadow: 1px 1px 1px red;
+        }
+        #advertencia{position: absolute;
+                    top:130px;
+                    left:300px;
+                    font-size: 2em;
+                    color:red;
+                    
+                    }
+        #bats{position: absolute;
+             top:250px;
+             left:100px;
+             visibility: hidden;
+             }
+        #calabaza{position: absolute;
+                 top:395px;
+                 left: 70px;
+                 width: 105px;
+                 height: 105px;
+                 cursor: pointer;
+                /* border: 1px solid white;*/
+                 }
+    </style>
+    <script>
+        function mostrar(identidicador){
+          document.getElementById(identidicador).style.visibility="visible";
+        }
+        function ocultar(identidicador){
+           document.getElementById(identidicador).style.visibility="hidden";
+        }
+        function sonar(sonido){
+            document.getElementById(sonido).play();
+        }
+        function parar(sonido){
+            document.getElementById(sonido).pause();
+        }
+    </script>
+</head>
+<body onload="sonar('nana')"> <!-- el evento que hace sonar la nana es cargar la pagina-->
+    <div id="container">
+        <audio src="sonidos/lullaby.mp3" id="nana" controls></audio>
+        <audio src="sonidos/grito.mp3" id="grito"></audio>
+        <p id="titulo">Terrorifica fiesta de Halloween </p>
+        <p id ="advertencia">No toques la calabaza de la izquierda</p>
+        <img id= "bats" src="imagenes/bats.gif">
+        <div id="calabaza" onmouseover="mostrar('bats');sonar('grito')"
+         onmouseout="ocultar('bats');parar('grito')"></div>
+
+    </div>
+</body>
+</html>
