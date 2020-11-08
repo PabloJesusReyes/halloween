@@ -2,9 +2,15 @@
 /* CURSO 2020/21 */
 
 @font-face {
-    font-family: halloween1;
+    font-family: titulo;
     src: url('../tipografias/PrimalDream.otf');
 }
+
+@font-face {
+       font-family: parrafo;
+       src: url('../tipografias/AUBREY1.TTF');
+   }
+
 body {background-color: black;}
 #container {position:relative; /* EL CONTENEDOR, RELATIVO */
             background-image:url('../imagenes/fondo.png');
@@ -15,19 +21,19 @@ body {background-color: black;}
 #titulo {position:absolute; /* EL CONTENIDO, ABSOLUTO */
          top:2px;
          left:1170px;
-         font-family:halloween1;
+         font-family:titulo;
          font-size: 3em;
          color:rgb(46, 23, 26);
          text-shadow:1px 1px 1px black;
 }
 
-#velagrande {position: absolute;
+#velagrande {position: absolute; /*para la animacion de la vela*/
        top:243px;
        left:1302px;
        animation-iteration-count: infinite;
 }
 
-#velapequeña {position: absolute;
+#velapequeña {position: absolute;/*para la animación de la vela*/
        top:322px;
        left:431px;
        animation-iteration-count: infinite;
@@ -39,14 +45,14 @@ body {background-color: black;}
        visibility:hidden;
        animation-iteration-count: infinite;}
 
-#espejo {position:absolute;
+#espejo {position:absolute; /*el area del espejo donde carga la animación y el sonido al pasar el ratón*/
            top:20px;
            left:65px;
            width:200px;
            height:450px;
            /*border:1px solid rgb(112, 16, 16);*/
        }
-#cuadro {position:absolute;
+#cuadro {position:absolute; /*area donde del cuadro*/
        top:50px;
        left:430px;
        width:190px;
@@ -54,12 +60,12 @@ body {background-color: black;}
        cursor: url('../imagenes/cursor.cur'), auto;
        /*border:2px solid rgb(134, 23, 23);*/         
 }
-#cuadroover {position:absolute;      
+#cuadroover {position:absolute;   /* para resaltar el cuadro cuando pones el ratón encima*/
          visibility:hidden;
          left:-1px;
 }
 
-#cuadroanimacion {position: absolute;
+#cuadroanimacion {position: absolute; /*Para que el cuadro parpadee*/
        top:42px;
        left:426px;
        animation-iteration-count: infinite;
@@ -68,16 +74,16 @@ body {background-color: black;}
 #cuadrodialogo{ position: absolute;
        top:110px;
        left:670px;
-       font-size:1.2em;
+       font-size:1.4em;
        color: rgb(68, 26, 40);
        background-color:#d8c1a6;
        padding:15px;
        border: 3px solid rgb(46, 23, 26);
-       font-family: cursive;
+       font-family: parrafo;
        visibility: hidden;
 }
 
-#calavera { position:absolute;
+#calavera { position:absolute;     /*area de la calavera*/
        top:320px;
        left:1020px;
        width:55px;
@@ -85,11 +91,11 @@ body {background-color: black;}
        cursor: url('../imagenes/cursor.cur'), auto;
        /*border:2px solid rgb(134, 23, 23)*/;
 }
-#calaveraover { position:absolute;      
+#calaveraover { position:absolute;      /**/
        visibility:hidden;
 }
 
-#calaveradialogo{ position: absolute;
+#calaveradialogo{ position: absolute;     /*resalta la calavera al pasar el ratón*/
        top:360px;
        left:670px;
        font-size:1.2em;
@@ -97,11 +103,11 @@ body {background-color: black;}
        background-color:#d8c1a6;
        padding:15px;
        border: 3px solid rgb(46, 23, 26);
-       font-family: cursive;
+       font-family: parrafo;
        visibility: hidden;
 }
 
-#pentagrama { position:absolute;
+#pentagrama { position:absolute;   /*area del pentagrama*/
        top:730px;
        left:90px;
        width:335px;
@@ -109,7 +115,7 @@ body {background-color: black;}
        cursor: url('../imagenes/cursor.cur'), auto;
        /*border:2px solid rgb(134, 23, 23)*/;
 }
-#pentagramaover { position:absolute;      
+#pentagramaover { position:absolute;      /*resalta el pentagrama*/
        visibility:hidden;
 }
 
@@ -121,12 +127,37 @@ body {background-color: black;}
        background-color:#d8c1a6;
        padding:15px;
        border: 3px solid rgb(46, 23, 26);
-       font-family: cursive;
+       font-family: parrafo;
        visibility: hidden;
 }
-#llave {position: absolute;
+#llave {position: absolute;       /*muestra la llave tras el evento de la calavera*/
        top:720px;
        left:1430px;
        visibility: hidden;
        border: 1px solid black;
+}
+#presentacion {position: absolute; /*Texto de introducción al cargar la web*/
+       top:520px;
+       left:270px;
+       font-size:1.4em;
+       color: rgb(68, 26, 40);
+       background-color:#d8c1a6;
+       padding:15px;
+       border: 3px solid rgb(46, 23, 26);
+       font-family: parrafo;
+       cursor: pointer;
+       visibility: visible;
+}
+
+#despedida {position: absolute; /*Texto de introducción al cargar la web*/
+       top:520px;
+       left:270px;
+       font-size:1.4em;
+       color: rgb(68, 26, 40);
+       background-color:#d8c1a6;
+       padding:15px;
+       border: 3px solid rgb(46, 23, 26);
+       font-family: parrafo;
+       cursor: pointer;
+       visibility: hidden;
 }

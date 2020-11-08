@@ -1,4 +1,4 @@
-/* FUNCIONES DE PRESENTACIÓN DE HALLOWEEN CURSO 2020-21 */
+/* FUNCIONES DE PRESENTACIÓN DE HALLOWEEN */
 function mostrar(identificador){
     document.getElementById(identificador).style.visibility="visible";
 }

@@ -13,35 +13,39 @@
 </head>
 <body onload="sonar('ambient')"><!-- el evento que hace sonar la musica es cargar la página. Sonar es una función que voy a definir en la zona de script-->
     <div id="container">
-        <audio src="sonidos/ambient.mp3" id="ambient" autoplay loop></audio><!-- sonido de fondo -->
+        <!--audios de la web-->
+        <audio src="sonidos/ambient.mp3" id="ambient" autoplay loop></audio>
         <audio src="sonidos/llavesound.mp3" id="llavesound"></audio>
         <audio src="sonidos/espejosound.mp3" id="espejosound"></audio>
+        <audio src="sonidos/victoria.mp3" id="victoria"></audio>
         <p id="titulo">La cabaña</p>
-        
+          <!--texto de entrada y salida-->
+        <p id="presentacion" onclick="ocultar('presentacion')">Te despiertas en una cabaña y estas encerrado, no recuerdas nada.(Haz click para continuar)</p>
+        <p id="despedida" onclick="ocultar('despedida');sonar('victoria')">Encuentras la llave de la puerta y consigues salir de esa horrible habitación.(Haz click para continuar)</p>
+        <!--animaciones de las velas-->
         <img id="velagrande" src="imagenes/velagrande.gif">
         <img id="velapequeña" src="imagenes/velapequeña.gif">
-        
+        <!--todo lo relacionado con el espejo-->
         <img id="espejoanimacion" src="imagenes/espejoanimacion.gif">
         <div id="espejo" onmouseover="mostrar('espejoanimacion');sonar('espejosound')"
         onmouseout="ocultar('espejoanimacion');parar('espejosound')"></div>
-
+        <!--todo lo relacionado con el cuadro-->
         <img id="cuadroanimacion" src="imagenes/cuadroanimacion.gif">
-        <p id="cuadrodialogo"> Un cuado de una persona posando, parece antiguo.</p>
+        <p id="cuadrodialogo"> Un cuadro de una persona posando, parece antiguo.</p>
         <img id="cuadroover" src="imagenes/cuadroover.png">
         <div id="cuadro" onmouseover="mostrar('cuadroover')" onmouseout="ocultar('cuadroover'); ocultar('cuadrodialogo')"
         onclick="mostrar('cuadrodialogo')"></div>
-
+        <!--todo lo relacionado con la calavera-->
         <img id="llave" src="imagenes/llave.png">
         <p id="calaveradialogo"> ¡Parece que dentro de la calavera hay algo!</p>
         <img id="calaveraover" src="imagenes/calaveraover.png">
-        <div id="calavera" onmouseover="mostrar('calaveraover')" onmouseout="ocultar('calaveraover'); ocultar('calaveradialogo'); mostrar('llave');sonar('llavesound')"
+        <div id="calavera" onmouseover="mostrar('calaveraover')" onmouseout="ocultar('calaveraover'); ocultar('calaveradialogo'); mostrar('llave');sonar('llavesound');mostrar('despedida')"
         onclick="mostrar('calaveradialogo')"></div>
-        
+        <!--todo lo relacionado con el pentagrama-->
         <p id="pentagramadialogo"> Me gustaría saber que es lo que esta pasado aqui... </p>
         <img id="pentagramaover" src="imagenes/pentagramaover.png">
         <div id="pentagrama" onmouseover="mostrar('pentagramaover')" onmouseout="ocultar('pentagramaover');ocultar('pentagramadialogo')"
         onclick="mostrar('pentagramadialogo')"></div>
-        
         
     </div>
 </body>
